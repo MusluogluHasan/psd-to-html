@@ -1,0 +1,156 @@
+@import url('header.css');
+@import url('modal.css');
+
+:root {
+    --darkgray: #1e2025;
+    --brightred: #F9423D;
+    --lightred: #f9433dcc;
+    --lightblue: #337AF1;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.nav-container {
+    width: 100%;
+    background-color: var(--darkgray);
+}
+
+.navbar .container{
+    height: 80px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar-logo {
+    color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-fixed{
+position: fixed;
+top: 0;
+right: 0;
+background-color: var(--darkgray);
+width: 100%;
+}
+
+.nav-menu .nav-links {
+    color: #ffffff;
+    margin:0 1.2rem;
+    font-size: 1.2rem;
+}
+
+.nav-links:hover {
+    color: var(--brightred);
+    transition: all .5s ease-out;
+}
+
+.nav-links-btn {
+    background-color: var(--brightred);
+    padding: 6px 16px;
+    border-radius: 4px;
+}
+
+.nav-menu .nav-links-btn:hover {
+    color: #fff;
+    background-color: var(--lightblue);
+    transition: all .3s;
+}
+
+.menu-toggle .bar {
+    display: inline-block;
+    margin: 4px auto;
+    height: 3px;
+    width: 27px;
+    background: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .nav-container {
+        position: relative;
+    }
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--brightred);
+        width: 100%;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+        /* yandan açılır menu*/
+        left:-100%;
+        opacity:0;
+
+        /**/
+        top: 80px;
+        transition: all .5s ease-in-out;
+    }
+    /* yandan açılır active olayı*/
+    .active {
+        left:0;
+        opacity: 1;
+        transition: all .5s ease-in-out;
+    }
+
+    #navbar-logo {
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .nav-links:hover {
+        color: #fff;
+    }
+
+    #mobile-menu {
+        display: flex;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    .nav-menu .nav-links-btn:hover {
+        border: none;
+        background-color: transparent;
+    }
+}
+

@@ -1,0 +1,113 @@
+:root {
+    --darkgray: #1e2025;
+    --brightred: #F9423D;
+    --lightred: #f9433dcc;
+    --lightblue: #337AF1;
+    --errorcolor:#f00e0e;
+    --validColor:#0add0a;
+}
+.close-btn{
+    position: absolute;
+    display: inline;
+    right: 21%;
+    font-size: 1.5rem;
+}
+.close-btn:hover{
+    color: var(--brightred);
+}
+.modal{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+    
+}
+.modal-active{
+    display: block;
+}
+.modal-content{
+    display: flex;
+    background-color: #f4f4f4;
+    margin: 5% auto;
+    width: 60%;
+    height: 88%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,.2);
+    border-radius: 3px;
+}
+.modal-content-left img{
+    width: 100%;
+    height: 100%;
+}
+.modal-content-left{
+    width: 50%;
+    background: #f9433d;
+}
+.modal-content-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.modal-form{
+    width: 99%;
+}
+.form-validation input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    border: 1px solid var(--darkgray);
+    outline: none;
+    padding: 0 10px;
+}
+.modal-content-right .button{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: var(--brightred);
+    border: none;
+    border-radius: 3px;
+    color:#fff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.modal-content-right strong{
+    color: var(--brightred);
+}
+.form-validation span{
+    display: none;
+}
+.already{
+    padding-left: 7px;
+    font-size: .8rem;
+    
+}
+.l-text{
+    display: flex;
+}
+.l-text a{
+    color: var(--darkgray);
+}
+.modal-form h1{
+    margin-bottom: 10px;
+}
+@media screen and (max-width:768px){
+    .modal-content-left{
+        display: none;
+    }
+    .modal-content-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .modal-form h1{
+        margin-bottom: 10px;
+    }
+}
